@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller_AddProduct">
+    <children>
+        <Label layoutX="61.0" layoutY="38.0" text="Add Product">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Label>
+        <TextField fx:id="AddProduct_SearchField" layoutX="707.0" layoutY="39.0" prefHeight="25.0" prefWidth="159.0" promptText="Search by Part ID or Name" />
+        <Label layoutX="108.0" layoutY="170.0" text="ID" />
+        <Label layoutX="108.0" layoutY="213.0" text="Name" />
+        <Label layoutX="108.0" layoutY="253.0" text="Inv" />
+        <Label layoutX="108.0" layoutY="300.0" text="Price" />
+        <Label layoutX="108.0" layoutY="342.0" text="Max" />
+        <Label layoutX="276.0" layoutY="342.0" text="Min" />
+        <TextField fx:id="AddProduct_ID" editable="false" layoutX="158.0" layoutY="166.0" />
+        <TextField fx:id="AddProduct_Name" layoutX="158.0" layoutY="209.0" />
+        <TextField fx:id="AddProduct_Inv" layoutX="158.0" layoutY="249.0" prefHeight="25.0" prefWidth="107.0" />
+        <TextField fx:id="AddProduct_Price" layoutX="158.0" layoutY="296.0" prefHeight="25.0" prefWidth="107.0" />
+        <TextField fx:id="AddProduct_Max" layoutX="158.0" layoutY="338.0" prefHeight="25.0" prefWidth="107.0" />
+        <TextField fx:id="AddProduct_Min" layoutX="307.0" layoutY="338.0" prefHeight="25.0" prefWidth="107.0" />
+        <TableView fx:id="AddProduct_TopTable" layoutX="499.0" layoutY="79.0" prefHeight="200.0" prefWidth="367.0">
+            <columns>
+                <TableColumn fx:id="AddProduct_IDcol1" prefWidth="60.0" text="Part ID" />
+                <TableColumn fx:id="AddProduct_NameCol1" prefWidth="62.0" text="Part Name" />
+                <TableColumn fx:id="AddProduct_InvCol1" prefWidth="103.0" text="Inventory Level" />
+                <TableColumn fx:id="AddProduct_PriceCol1" prefWidth="141.0" text="Price/Cost Per Unit" />
+            </columns>
+        </TableView>
+        <Button fx:id="AddProduct_AddButton" layoutX="787.0" layoutY="288.0" mnemonicParsing="false" onAction="#OnAddProduct_AddButton" text="Add" />
+        <Button fx:id="AddProduct_RemoveButt" layoutX="680.0" layoutY="526.0" mnemonicParsing="false" onAction="#OnAddProduct_RemoveButt" prefHeight="25.0" prefWidth="188.0" text="Remove Associated Part" />
+        <Button fx:id="OnProductSaveButton" layoutX="681.0" layoutY="561.0" mnemonicParsing="false" onAction="#OnProductSaveButton" text="Save" />
+        <Button fx:id="ProductCancelButton" layoutX="813.0" layoutY="561.0" mnemonicParsing="false" onAction="#OnProductCancelButton" text="Cancel" />
+        <TableView fx:id="AddProduct_BottomTable" layoutX="501.0" layoutY="321.0" prefHeight="200.0" prefWidth="367.0">
+            <columns>
+                <TableColumn fx:id="AddProduct_IDCol2" prefWidth="60.0" text="Part ID" />
+                <TableColumn fx:id="AddProduct_NameCol2" prefWidth="62.0" text="Part Name" />
+                <TableColumn fx:id="AddProduct_InvCol2" prefWidth="103.0" text="Inventory Level" />
+                <TableColumn fx:id="AddProduct_PriceCol2" prefWidth="141.0" text="Price/Cost Per Unit" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
